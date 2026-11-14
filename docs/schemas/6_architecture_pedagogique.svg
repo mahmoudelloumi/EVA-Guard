@@ -1,0 +1,326 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1130" font-family="Segoe UI, Arial, Helvetica, sans-serif">
+  <title>EVA-Guard — architecture pédagogique</title>
+  <defs>
+    <marker id="ah-blue" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#24427a"/></marker>
+    <marker id="ah-red" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+    <marker id="ah-green" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2e8b57"/></marker>
+    <marker id="ah-green-s" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2e8b57"/></marker>
+    <marker id="ah-violet" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6a4fb3"/></marker>
+    <marker id="ah-gray" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4b5563"/></marker>
+  </defs>
+
+  <rect width="1600" height="1130" fill="#ffffff"/>
+
+  <!-- ============ TITRE ============ -->
+  <text x="800" y="54" font-size="32" font-weight="700" fill="#1f2937" text-anchor="middle">EVA-Guard — de l'alerte à la preuve</text>
+  <text x="800" y="88" font-size="18" fill="#6b7280" text-anchor="middle"><tspan fill="#6a4fb3" font-weight="700">Le LLM propose</tspan>  ·  <tspan fill="#2e8b57" font-weight="700">les outils mesurent</tspan>  ·  <tspan fill="#24427a" font-weight="700">la règle décide</tspan></text>
+
+  <!-- ============ CADRES DES 4 BANDES (fond + bande de gauche) ============ -->
+  <g>
+    <rect x="30" y="110" width="1540" height="280" rx="14" fill="#fbfcfd"/>
+    <rect x="30" y="110" width="214" height="280" rx="14" fill="#e9eff8"/>
+    <rect x="230" y="110" width="14" height="280" fill="#fbfcfd"/>
+    <rect x="30" y="110" width="1540" height="280" rx="14" fill="none" stroke="#d9dee6" stroke-width="1.5"/>
+    <line x1="230" y1="110" x2="230" y2="390" stroke="#d9dee6" stroke-width="1.5"/>
+
+    <rect x="30" y="410" width="1540" height="215" rx="14" fill="#fbfcfd"/>
+    <rect x="30" y="410" width="214" height="215" rx="14" fill="#e6f4eb"/>
+    <rect x="230" y="410" width="14" height="215" fill="#fbfcfd"/>
+    <rect x="30" y="410" width="1540" height="215" rx="14" fill="none" stroke="#d9dee6" stroke-width="1.5"/>
+    <line x1="230" y1="410" x2="230" y2="625" stroke="#d9dee6" stroke-width="1.5"/>
+
+    <rect x="30" y="650" width="1540" height="318" rx="14" fill="#fbfcfd"/>
+    <rect x="30" y="650" width="214" height="318" rx="14" fill="#f0ecfa"/>
+    <rect x="230" y="650" width="14" height="318" fill="#fbfcfd"/>
+    <rect x="30" y="650" width="1540" height="318" rx="14" fill="none" stroke="#d9dee6" stroke-width="1.5"/>
+    <line x1="230" y1="650" x2="230" y2="968" stroke="#d9dee6" stroke-width="1.5"/>
+
+    <rect x="30" y="988" width="1540" height="97" rx="14" fill="#fbfcfd"/>
+    <rect x="30" y="988" width="214" height="97" rx="14" fill="#eceef1"/>
+    <rect x="230" y="988" width="14" height="97" fill="#fbfcfd"/>
+    <rect x="30" y="988" width="1540" height="97" rx="14" fill="none" stroke="#d9dee6" stroke-width="1.5"/>
+    <line x1="230" y1="988" x2="230" y2="1085" stroke="#d9dee6" stroke-width="1.5"/>
+  </g>
+
+  <!-- ============ BANDE 1 : LABO ============ -->
+  <circle cx="72" cy="154" r="22" fill="#24427a"/>
+  <text x="72" y="162" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="50" y="206" font-size="19" font-weight="700" fill="#24427a">Labo Ethereum</text>
+  <text x="50" y="229" font-size="19" font-weight="700" fill="#24427a">privé</text>
+  <text x="50" y="254" font-size="14" fill="#4b5563">Docker, isolé</text>
+  <path d="M53.5,322 v-4.5 a4.5,4.5 0 0 1 9,0 v4.5" fill="none" stroke="#c0392b" stroke-width="2.2"/>
+  <rect x="50" y="322" width="16" height="13" rx="2" fill="#c0392b"/>
+  <text x="74" y="332" font-size="13" font-weight="700" fill="#c0392b">jamais en dehors</text>
+  <text x="74" y="349" font-size="13" font-weight="700" fill="#c0392b">du labo</text>
+
+  <!-- Réseau honnête -->
+  <rect x="260" y="140" width="420" height="205" rx="12" fill="#eaf2fc" stroke="#2563a8" stroke-width="1.5"/>
+  <text x="280" y="167" font-size="15" font-weight="700" fill="#1b4a80">Réseau honnête</text>
+  <g fill="#ffffff" stroke="#2563a8" stroke-width="1.5">
+    <rect x="278" y="184" width="115" height="46" rx="8"/>
+    <rect x="413" y="184" width="115" height="46" rx="8"/>
+    <rect x="548" y="184" width="115" height="46" rx="8"/>
+    <rect x="278" y="248" width="185" height="74" rx="8"/>
+    <rect x="478" y="248" width="185" height="74" rx="8"/>
+  </g>
+  <g fill="#1b4a80" text-anchor="middle">
+    <text x="335.5" y="213" font-size="16" font-weight="700">H1</text>
+    <text x="470.5" y="213" font-size="16" font-weight="700">H2</text>
+    <text x="605.5" y="213" font-size="16" font-weight="700">H3</text>
+    <text x="370.5" y="279" font-size="16" font-weight="700">Signer</text>
+    <text x="370.5" y="303" font-size="14">1 bloc / 5 s</text>
+    <text x="570.5" y="279" font-size="16" font-weight="700">Nœud référence</text>
+    <text x="570.5" y="303" font-size="14">vraie hauteur</text>
+  </g>
+
+  <!-- P2P normal -->
+  <g stroke="#2563a8" stroke-width="2.5">
+    <line x1="682" y1="200" x2="770" y2="222"/>
+    <line x1="682" y1="242" x2="770" y2="242"/>
+    <line x1="682" y1="284" x2="770" y2="262"/>
+  </g>
+  <text x="725" y="188" font-size="13" font-weight="700" fill="#1b4a80" text-anchor="middle">P2P normal</text>
+
+  <!-- Victime -->
+  <rect x="770" y="172" width="260" height="140" rx="12" fill="#fff1dc" stroke="#e07b00" stroke-width="3"/>
+  <path d="M868,204 Q900,182 932,204 Q900,226 868,204 Z" fill="#ffffff" stroke="#e07b00" stroke-width="2"/>
+  <circle cx="900" cy="204" r="7" fill="#e07b00"/>
+  <circle cx="902" cy="202" r="2.2" fill="#ffffff"/>
+  <text x="900" y="256" font-size="26" font-weight="700" fill="#9a5200" text-anchor="middle">VICTIME</text>
+  <text x="900" y="285" font-size="15" fill="#9a5200" text-anchor="middle">Geth · max 10 pairs</text>
+
+  <!-- Attaques -->
+  <g stroke="#c0392b" stroke-width="2.5" marker-end="url(#ah-red)">
+    <line x1="1118" y1="200" x2="1034" y2="222"/>
+    <line x1="1118" y1="242" x2="1034" y2="242"/>
+    <line x1="1118" y1="284" x2="1034" y2="262"/>
+  </g>
+  <text x="1075" y="188" font-size="13" font-weight="700" fill="#c0392b" text-anchor="middle">attaque</text>
+
+  <!-- Réseau attaquant -->
+  <rect x="1120" y="140" width="420" height="205" rx="12" fill="#fdeceb" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="1140" y="167" font-size="15" font-weight="700" fill="#962d22">Réseau attaquant</text>
+  <text x="1286" y="167" font-size="12.5" fill="#962d22">· 6 à 10 nœuds Sybil</text>
+  <g fill="#ffffff" stroke="#c0392b" stroke-width="1.5">
+    <rect x="1136" y="184" width="58" height="46" rx="8"/>
+    <rect x="1202" y="184" width="58" height="46" rx="8"/>
+    <rect x="1268" y="184" width="58" height="46" rx="8"/>
+    <rect x="1334" y="184" width="58" height="46" rx="8"/>
+    <rect x="1400" y="184" width="58" height="46" rx="8"/>
+    <rect x="1466" y="184" width="58" height="46" rx="8"/>
+    <rect x="1138" y="248" width="384" height="74" rx="8"/>
+  </g>
+  <g fill="#962d22" text-anchor="middle" font-size="15" font-weight="700">
+    <text x="1165" y="213">A1</text>
+    <text x="1231" y="213">A2</text>
+    <text x="1297" y="213">A3</text>
+    <text x="1363" y="213">A4</text>
+    <text x="1429" y="213">A5</text>
+    <text x="1495" y="213">A6</text>
+    <text x="1330" y="279" font-size="16">Scripts d'attaque</text>
+    <text x="1330" y="303" font-size="14" font-weight="400">Eclipse · DoS P2P</text>
+  </g>
+
+  <!-- ============ LIENS BANDE 1 -> BANDE 2 ============ -->
+  <!-- victime -> métriques -> 4 sources -->
+  <line x1="900" y1="314" x2="900" y2="462" stroke="#2e8b57" stroke-width="5"/>
+  <text x="912" y="364" font-size="14" font-weight="700" fill="#1e6b41">métriques</text>
+  <path d="M412,462 H623 a7,7 0 0 1 14,0 H1387" fill="none" stroke="#2e8b57" stroke-width="3"/>
+  <g stroke="#2e8b57" stroke-width="3" marker-end="url(#ah-green)">
+    <line x1="412" y1="462" x2="412" y2="480"/>
+    <line x1="737" y1="462" x2="737" y2="480"/>
+    <line x1="1062" y1="462" x2="1062" y2="480"/>
+    <line x1="1387" y1="462" x2="1387" y2="480"/>
+  </g>
+  <!-- nœud référence -> source Chaîne -->
+  <line x1="630" y1="322" x2="630" y2="480" stroke="#2563a8" stroke-width="2" marker-end="url(#ah-blue)"/>
+  <text x="640" y="368" font-size="12.5" font-style="italic" fill="#1b4a80">hauteur réf.</text>
+
+  <!-- ============ BANDE 2 : COLLECTE ============ -->
+  <circle cx="72" cy="454" r="22" fill="#2e8b57"/>
+  <text x="72" y="462" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="50" y="506" font-size="19" font-weight="700" fill="#1e6b41">Collecte</text>
+  <text x="50" y="529" font-size="19" font-weight="700" fill="#1e6b41">multi-source</text>
+  <text x="50" y="554" font-size="14" fill="#4b5563">fenêtres de 10 s</text>
+
+  <g fill="#e5f5ea" stroke="#2e8b57" stroke-width="1.8">
+    <rect x="260" y="482" width="305" height="80" rx="10"/>
+    <rect x="585" y="482" width="305" height="80" rx="10"/>
+    <rect x="910" y="482" width="305" height="80" rx="10"/>
+    <rect x="1235" y="482" width="305" height="80" rx="10"/>
+  </g>
+  <!-- icônes -->
+  <g stroke="#2e8b57" stroke-width="2" fill="#ffffff">
+    <!-- P2P : réseau -->
+    <line x1="284" y1="514" x2="304" y2="514"/><line x1="284" y1="514" x2="294" y2="532"/><line x1="304" y1="514" x2="294" y2="532"/>
+    <circle cx="284" cy="514" r="5"/><circle cx="304" cy="514" r="5"/><circle cx="294" cy="532" r="5"/>
+    <!-- Chaîne : blocs liés -->
+    <rect x="602" y="517" width="9" height="9" rx="1.5"/><rect x="615" y="517" width="9" height="9" rx="1.5"/><rect x="628" y="517" width="9" height="9" rx="1.5"/>
+    <line x1="611" y1="521.5" x2="615" y2="521.5"/><line x1="624" y1="521.5" x2="628" y2="521.5"/>
+    <!-- Système : processeur -->
+    <rect x="934" y="512" width="20" height="20" rx="3"/>
+    <line x1="939" y1="508" x2="939" y2="512"/><line x1="944" y1="508" x2="944" y2="512"/><line x1="949" y1="508" x2="949" y2="512"/>
+    <line x1="939" y1="532" x2="939" y2="536"/><line x1="944" y1="532" x2="944" y2="536"/><line x1="949" y1="532" x2="949" y2="536"/>
+    <line x1="930" y1="517" x2="934" y2="517"/><line x1="930" y1="522" x2="934" y2="522"/><line x1="930" y1="527" x2="934" y2="527"/>
+    <line x1="954" y1="517" x2="958" y2="517"/><line x1="954" y1="522" x2="958" y2="522"/><line x1="954" y1="527" x2="958" y2="527"/>
+    <!-- RPC : serveur -->
+    <rect x="1257" y="510" width="24" height="10" rx="2"/><rect x="1257" y="524" width="24" height="10" rx="2"/>
+  </g>
+  <rect x="940" y="518" width="8" height="8" fill="#2e8b57"/>
+  <circle cx="1262" cy="515" r="1.8" fill="#2e8b57"/><circle cx="1262" cy="529" r="1.8" fill="#2e8b57"/>
+  <!-- textes des sources -->
+  <g font-size="17" font-weight="700" fill="#1e6b41">
+    <text x="324" y="516">P2P</text>
+    <text x="649" y="516">Chaîne</text>
+    <text x="974" y="516">Système</text>
+    <text x="1299" y="516">RPC</text>
+  </g>
+  <g font-size="14" fill="#374151">
+    <text x="324" y="541">pairs, diversité, churn</text>
+    <text x="649" y="541">hauteur, retard de sync</text>
+    <text x="974" y="541">CPU, RAM</text>
+    <text x="1299" y="541">requêtes/s, latence, erreurs</text>
+  </g>
+  <!-- sources -> stockage -->
+  <g stroke="#2e8b57" stroke-width="2.5" marker-end="url(#ah-green-s)">
+    <line x1="412" y1="563" x2="412" y2="579"/>
+    <line x1="737" y1="563" x2="737" y2="579"/>
+    <line x1="1062" y1="563" x2="1062" y2="579"/>
+    <line x1="1387" y1="563" x2="1387" y2="579"/>
+  </g>
+  <rect x="260" y="580" width="1280" height="32" rx="8" fill="#d9f0e2" stroke="#2e8b57" stroke-width="1.5"/>
+  <text x="900" y="601" font-size="15" fill="#1e6b41" text-anchor="middle"><tspan font-weight="700">Prometheus + dataset CSV</tspan>  ·  1 ligne = 1 fenêtre de 10 s</text>
+
+  <!-- ============ LIENS BANDE 2 -> BANDE 3 ============ -->
+  <line x1="360" y1="614" x2="360" y2="731" stroke="#2e8b57" stroke-width="3" marker-end="url(#ah-green)"/>
+  <text x="372" y="642" font-size="13" font-weight="700" fill="#1e6b41">flux de métriques</text>
+  <line x1="900" y1="731" x2="900" y2="616" stroke="#24427a" stroke-width="2" stroke-dasharray="7 5" marker-start="url(#ah-blue)" marker-end="url(#ah-blue)"/>
+  <text x="912" y="642" font-size="13" font-weight="700" fill="#24427a">vérifier les preuves</text>
+
+  <!-- ============ BANDE 3 : AGENTS ============ -->
+  <circle cx="72" cy="694" r="22" fill="#6a4fb3"/>
+  <text x="72" y="702" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="50" y="746" font-size="19" font-weight="700" fill="#4b3590">Système</text>
+  <text x="50" y="769" font-size="19" font-weight="700" fill="#4b3590">multi-agents</text>
+  <text x="50" y="794" font-size="14" fill="#4b5563">LangGraph</text>
+  <text x="50" y="846" font-size="13" font-weight="700" fill="#374151">Comparaison</text>
+  <g font-size="12.5" fill="#4b5563">
+    <text x="50" y="868">B1 = ML seul</text>
+    <text x="50" y="888">B2 = ML + LLM/RAG</text>
+    <text x="50" y="908">EVA-Guard = + preuves</text>
+  </g>
+
+  <!-- Base RAG -->
+  <path d="M575,668 v36 a55,8 0 0 0 110,0 v-36" fill="#f7f4ff" stroke="#6a4fb3" stroke-width="1.5"/>
+  <ellipse cx="630" cy="668" rx="55" ry="8" fill="#ebe4ff" stroke="#6a4fb3" stroke-width="1.5"/>
+  <text x="630" y="689" font-size="12.5" font-weight="700" fill="#4b3590" text-anchor="middle">Base RAG</text>
+  <text x="630" y="703" font-size="11.5" fill="#4b3590" text-anchor="middle">docs Ethereum</text>
+  <line x1="630" y1="714" x2="630" y2="732" stroke="#6a4fb3" stroke-width="2" marker-end="url(#ah-violet)"/>
+
+  <!-- Repères : où chaque configuration décide -->
+  <g stroke-dasharray="3 3" stroke-width="1.5">
+    <line x1="495" y1="714" x2="495" y2="769" stroke="#9aa3b2"/>
+    <line x1="765" y1="714" x2="765" y2="769" stroke="#9aa3b2"/>
+    <line x1="1305" y1="716" x2="1305" y2="769" stroke="#24427a"/>
+  </g>
+  <rect x="437" y="688" width="116" height="26" rx="13" fill="#ffffff" stroke="#9aa3b2" stroke-width="1.5"/>
+  <text x="495" y="705.5" font-size="12.5" fill="#4b5563" text-anchor="middle">B1 décide ici</text>
+  <rect x="707" y="688" width="116" height="26" rx="13" fill="#ffffff" stroke="#9aa3b2" stroke-width="1.5"/>
+  <text x="765" y="705.5" font-size="12.5" fill="#4b5563" text-anchor="middle">B2 décide ici</text>
+  <rect x="1215" y="686" width="180" height="30" rx="15" fill="#24427a"/>
+  <text x="1305" y="706" font-size="13.5" font-weight="700" fill="#ffffff" text-anchor="middle">EVA-Guard décide ici</text>
+
+  <!-- Les 5 agents -->
+  <g fill="#efeafb" stroke="#6a4fb3" stroke-width="1.8">
+    <rect x="260" y="735" width="200" height="80" rx="10"/>
+    <rect x="530" y="735" width="200" height="80" rx="10"/>
+    <rect x="800" y="735" width="200" height="80" rx="10"/>
+    <rect x="1070" y="735" width="200" height="80" rx="10" stroke-width="3"/>
+    <rect x="1340" y="735" width="200" height="80" rx="10"/>
+  </g>
+  <g text-anchor="middle">
+    <g font-size="16" font-weight="700" fill="#4b3590">
+      <text x="360" y="768">1. Détection</text>
+      <text x="630" y="768">2. Interprétation</text>
+      <text x="900" y="768">3. Corrélation</text>
+      <text x="1170" y="768">4. Confirmation</text>
+      <text x="1440" y="768">5. Restitution</text>
+    </g>
+    <g font-size="13.5" fill="#374151">
+      <text x="360" y="793">Isolation Forest + XGBoost</text>
+      <text x="630" y="793">LLM + RAG</text>
+      <text x="900" y="793">outils Python</text>
+      <text x="1170" y="793">règle fixe</text>
+      <text x="1440" y="793">rapport + recommandation</text>
+    </g>
+  </g>
+  <g stroke="#6a4fb3" stroke-width="2.5" marker-end="url(#ah-violet)">
+    <line x1="462" y1="775" x2="528" y2="775"/>
+    <line x1="732" y1="775" x2="798" y2="775"/>
+    <line x1="1002" y1="775" x2="1068" y2="775"/>
+    <line x1="1272" y1="775" x2="1338" y2="775"/>
+  </g>
+  <g font-size="13" font-style="italic" fill="#4b3590" text-anchor="middle">
+    <text x="495" y="797">alerte</text>
+    <text x="765" y="797">hypothèse</text>
+    <text x="1035" y="797">preuves</text>
+    <text x="1305" y="797">décision</text>
+  </g>
+
+  <!-- Règle de décision + résultats -->
+  <line x1="1170" y1="815" x2="1170" y2="832" stroke="#6a4fb3" stroke-width="2"/>
+  <rect x="1014" y="832" width="312" height="48" rx="8" fill="#faf8ff" stroke="#6a4fb3" stroke-width="1.5"/>
+  <text x="1170" y="852" font-size="13.5" font-weight="700" fill="#4b3590" text-anchor="middle">Règle : ≥ 3 preuves · ≥ 2 sources</text>
+  <text x="1170" y="871" font-size="13.5" fill="#374151" text-anchor="middle">et 2 fenêtres de suite</text>
+  <g stroke="#4b5563" stroke-width="2" marker-end="url(#ah-gray)">
+    <line x1="1140" y1="881" x2="1100" y2="904"/>
+    <line x1="1200" y1="881" x2="1240" y2="904"/>
+  </g>
+  <text x="1108" y="893" font-size="12" font-weight="700" fill="#4b5563" text-anchor="end">oui</text>
+  <text x="1232" y="893" font-size="12" font-weight="700" fill="#4b5563">non</text>
+  <rect x="1014" y="906" width="150" height="46" rx="10" fill="#c0392b"/>
+  <text x="1089" y="926" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">CONFIRMÉE</text>
+  <text x="1089" y="943" font-size="12.5" fill="#fde7e5" text-anchor="middle">attaque prouvée</text>
+  <rect x="1176" y="906" width="150" height="46" rx="10" fill="#fff3bf" stroke="#d4a017" stroke-width="1.5"/>
+  <text x="1251" y="926" font-size="14" font-weight="700" fill="#7a5b00" text-anchor="middle">NON CONFIRMÉE</text>
+  <text x="1251" y="943" font-size="12.5" fill="#7a5b00" text-anchor="middle">à surveiller</text>
+
+  <!-- Restitution -> dashboard -->
+  <line x1="1440" y1="817" x2="1440" y2="998" stroke="#4b5563" stroke-width="2.5" marker-end="url(#ah-gray)"/>
+
+  <!-- ============ BANDE 4 : DASHBOARD ============ -->
+  <circle cx="70" cy="1036" r="20" fill="#2f3640"/>
+  <text x="70" y="1043.5" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="102" y="1032" font-size="18" font-weight="700" fill="#2f3640">Dashboard</text>
+  <text x="102" y="1054" font-size="14" fill="#4b5563">Streamlit</text>
+
+  <rect x="260" y="1002" width="1280" height="70" rx="10" fill="#2f3640"/>
+  <circle cx="280" cy="1015" r="4" fill="#ff6159"/>
+  <circle cx="296" cy="1015" r="4" fill="#ffbd2e"/>
+  <circle cx="312" cy="1015" r="4" fill="#28c941"/>
+  <text x="332" y="1019" font-size="12" fill="#c9d1db">EVA-Guard · tableau de bord</text>
+  <g fill="#424c58">
+    <rect x="276" y="1028" width="320" height="36" rx="6"/>
+    <rect x="612" y="1028" width="320" height="36" rx="6"/>
+    <rect x="948" y="1028" width="576" height="36" rx="6"/>
+  </g>
+  <g font-size="14.5" font-weight="700" fill="#ffffff" text-anchor="middle">
+    <text x="436" y="1051">Décision</text>
+    <text x="772" y="1051">Preuves <tspan fill="#4ade80">✔</tspan> / <tspan fill="#f87171">✘</tspan></text>
+    <text x="1236" y="1051">Explication + recommandation</text>
+  </g>
+
+  <!-- ============ LÉGENDE + NOTE ============ -->
+  <text x="30" y="1112" font-size="12" fill="#6b7280">Labo isolé · Geth v1.13.15 (Clique, 1 bloc / 5 s) · fenêtres de 10 s</text>
+  <g transform="translate(890,0)">
+    <text x="0" y="1112" font-size="13" font-weight="700" fill="#374151">Légende :</text>
+    <line x1="80" y1="1108" x2="115" y2="1108" stroke="#2563a8" stroke-width="2.5"/>
+    <text x="123" y="1112" font-size="13" fill="#374151">P2P normal</text>
+    <line x1="215" y1="1108" x2="250" y2="1108" stroke="#2e8b57" stroke-width="3"/>
+    <text x="258" y="1112" font-size="13" fill="#374151">flux de métriques</text>
+    <line x1="390" y1="1108" x2="425" y2="1108" stroke="#24427a" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="433" y="1112" font-size="13" fill="#374151">demande de preuves</text>
+    <line x1="580" y1="1108" x2="613" y2="1108" stroke="#c0392b" stroke-width="2.5" marker-end="url(#ah-red)"/>
+    <text x="623" y="1112" font-size="13" fill="#374151">attaque</text>
+  </g>
+</svg>

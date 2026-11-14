@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 470" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#24427a"/></marker>
+  </defs>
+  <rect width="1000" height="470" fill="#ffffff"/>
+
+  <!-- Zone honnête -->
+  <rect x="20" y="20" width="360" height="295" rx="10" fill="#f2faf5" stroke="#2e8b57" stroke-width="1.5"/>
+  <text x="38" y="44" font-size="14" font-weight="700" fill="#1e6b41">Réseau honnête (honest_net)</text>
+  <g text-anchor="middle">
+    <rect x="40" y="60" width="150" height="50" rx="8" fill="#e3f4e8" stroke="#2e8b57"/>
+    <text x="115" y="81" font-size="12.5" font-weight="700" fill="#1e6b41">Signer + bootnode</text>
+    <text x="115" y="99" font-size="11" fill="#1e6b41">1 bloc toutes les 5 s</text>
+    <rect x="210" y="60" width="150" height="50" rx="8" fill="#e3f4e8" stroke="#2e8b57" stroke-width="2"/>
+    <text x="285" y="81" font-size="12.5" font-weight="700" fill="#1e6b41">Nœud référence</text>
+    <text x="285" y="99" font-size="11" fill="#1e6b41">« vraie » hauteur</text>
+    <g font-size="12" font-weight="700" fill="#1e6b41">
+      <rect x="40" y="135" width="70" height="40" rx="8" fill="#e3f4e8" stroke="#2e8b57"/><text x="75" y="160">H1</text>
+      <rect x="126" y="135" width="70" height="40" rx="8" fill="#e3f4e8" stroke="#2e8b57"/><text x="161" y="160">H2</text>
+      <rect x="212" y="135" width="70" height="40" rx="8" fill="#e3f4e8" stroke="#2e8b57"/><text x="247" y="160">H3</text>
+      <rect x="298" y="135" width="62" height="40" rx="8" fill="#e3f4e8" stroke="#2e8b57"/><text x="329" y="160">H4</text>
+    </g>
+    <text x="200" y="196" font-size="11" fill="#1e6b41">nœuds honnêtes (Geth, P2P entre eux)</text>
+    <rect x="40" y="215" width="320" height="50" rx="8" fill="#ffffff" stroke="#2e8b57" stroke-dasharray="5 3"/>
+    <text x="200" y="236" font-size="12.5" font-weight="700" fill="#1e6b41">Générateur de trafic normal</text>
+    <text x="200" y="254" font-size="11" fill="#1e6b41">transactions + appels RPC, rythme variable</text>
+    <text x="200" y="295" font-size="11" fill="#1e6b41" font-style="italic">+ scripts d'anomalies bénignes</text>
+  </g>
+
+  <!-- Victime -->
+  <rect x="425" y="110" width="150" height="110" rx="10" fill="#fff4d6" stroke="#c58a00" stroke-width="2.5"/>
+  <g text-anchor="middle">
+    <text x="500" y="138" font-size="15" font-weight="700" fill="#8a6100">VICTIME</text>
+    <text x="500" y="158" font-size="11.5" fill="#8a6100">Geth · maxpeers = 10</text>
+    <text x="500" y="178" font-size="11" fill="#8a6100">métriques :6060</text>
+    <text x="500" y="196" font-size="11" fill="#8a6100">RPC :8545 (via proxy)</text>
+  </g>
+  <line x1="382" y1="155" x2="423" y2="155" stroke="#2e8b57" stroke-width="3"/>
+  <text x="402" y="146" font-size="10" fill="#1e6b41" text-anchor="middle">P2P</text>
+  <line x1="577" y1="175" x2="618" y2="175" stroke="#c0392b" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="597" y="166" font-size="10" fill="#962d22" text-anchor="middle">Sybil</text>
+
+  <!-- Zone attaquante -->
+  <rect x="620" y="20" width="360" height="295" rx="10" fill="#fdf3f3" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="638" y="44" font-size="14" font-weight="700" fill="#962d22">Réseau attaquant (attack_net)</text>
+  <g font-size="12" font-weight="700" fill="#962d22" text-anchor="middle">
+    <rect x="640" y="65" width="70" height="40" rx="8" fill="#fde4e4" stroke="#c0392b"/><text x="675" y="90">A1</text>
+    <rect x="726" y="65" width="70" height="40" rx="8" fill="#fde4e4" stroke="#c0392b"/><text x="761" y="90">A2</text>
+    <rect x="812" y="65" width="70" height="40" rx="8" fill="#fde4e4" stroke="#c0392b"/><text x="847" y="90">A3</text>
+    <rect x="898" y="65" width="62" height="40" rx="8" fill="#fde4e4" stroke="#c0392b"/><text x="929" y="90">A4</text>
+    <rect x="640" y="120" width="70" height="40" rx="8" fill="#fde4e4" stroke="#c0392b"/><text x="675" y="145">A5</text>
+    <rect x="726" y="120" width="70" height="40" rx="8" fill="#fde4e4" stroke="#c0392b"/><text x="761" y="145">A6</text>
+    <rect x="812" y="120" width="70" height="40" rx="8" fill="#fde4e4" stroke="#c0392b"/><text x="847" y="145">…</text>
+    <rect x="898" y="120" width="62" height="40" rx="8" fill="#fde4e4" stroke="#c0392b"/><text x="929" y="145">A10</text>
+  </g>
+  <g text-anchor="middle" fill="#962d22">
+    <text x="800" y="186" font-size="11">nœuds Sybil (6-10) · comptes pré-financés (genesis)</text>
+    <rect x="640" y="205" width="320" height="60" rx="8" fill="#ffffff" stroke="#c0392b" stroke-dasharray="5 3"/>
+    <text x="800" y="228" font-size="12.5" font-weight="700">Scripts d'attaque</text>
+    <text x="800" y="247" font-size="11">Eclipse · DoS P2P · RPC flood (option)</text>
+    <text x="800" y="295" font-size="11" font-style="italic">⚠ jamais en dehors de ce réseau</text>
+  </g>
+
+  <!-- Monitoring -->
+  <line x1="500" y1="222" x2="500" y2="372" stroke="#24427a" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#a)"/>
+  <text x="508" y="300" font-size="11" fill="#3b4a66">métriques + logs</text>
+  <rect x="20" y="340" width="960" height="115" rx="10" fill="#f4f7fc" stroke="#24427a" stroke-width="1.5"/>
+  <text x="38" y="362" font-size="14" font-weight="700" fill="#24427a">Monitoring (monitor_net)</text>
+  <g text-anchor="middle" font-size="12.5" font-weight="700" fill="#24427a">
+    <rect x="40" y="378" width="165" height="55" rx="8" fill="#fff" stroke="#24427a"/><text x="122" y="401">Prometheus</text>
+    <text x="122" y="419" font-size="10.5" font-weight="400" fill="#3b4a66">scrape toutes les 5 s</text>
+    <rect x="225" y="378" width="165" height="55" rx="8" fill="#fff" stroke="#24427a"/><text x="307" y="401">cAdvisor</text>
+    <text x="307" y="419" font-size="10.5" font-weight="400" fill="#3b4a66">CPU, RAM, réseau</text>
+    <rect x="410" y="378" width="180" height="55" rx="8" fill="#fff" stroke="#24427a"/><text x="500" y="401">Collecteurs Python</text>
+    <text x="500" y="419" font-size="10.5" font-weight="400" fill="#3b4a66">victime + référence</text>
+    <rect x="610" y="378" width="165" height="55" rx="8" fill="#fff" stroke="#24427a"/><text x="692" y="401">Grafana</text>
+    <text x="692" y="419" font-size="10.5" font-weight="400" fill="#3b4a66">visualisation brute</text>
+    <rect x="795" y="378" width="165" height="55" rx="8" fill="#fff" stroke="#24427a"/><text x="877" y="401">Dataset CSV</text>
+    <text x="877" y="419" font-size="10.5" font-weight="400" fill="#3b4a66">fenêtres 10 s + labels</text>
+  </g>
+</svg>

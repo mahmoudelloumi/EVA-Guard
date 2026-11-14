@@ -1,0 +1,150 @@
+# Réseau Ethereum privé du labo EVA-Guard (semaine 3).
+#
+#   1. python infra/setup.py                            (une seule fois)
+#   2. docker compose -f infra/docker-compose.yml up -d
+#   3. python infra/check_network.py
+#
+# ⚠ Règle d'or : tout reste dans ce labo Docker. Jamais sur mainnet ou un testnet public.
+#
+# Plus tard : attack_net + attaquants (semaine 6), monitor_net + Prometheus/Grafana (semaine 4).
+
+name: eva-guard
+
+x-geth: &geth
+  image: ${GETH_IMAGE}
+  entrypoint: ["/bin/sh", "/scripts/start-geth.sh"]
+  restart: unless-stopped
+  stop_grace_period: 30s
+  logging:
+    driver: json-file
+    options: { max-size: "10m", max-file: "3" }
+
+x-geth-env: &geth-env
+  NETWORK_ID: ${NETWORK_ID}
+  NETRESTRICT: ${NETRESTRICT}
+
+services:
+  # Produit un bloc toutes les 5 s (Clique) et sert de bootnode
+  signer:
+    <<: *geth
+    container_name: eva-signer
+    environment:
+      <<: *geth-env
+      NODE_NAME: signer
+      NODE_IP: 172.28.0.10
+    command:
+      - --mine
+      - --miner.etherbase=${SIGNER_ADDRESS}
+      - --unlock=${SIGNER_ADDRESS}
+      - --password=/config/password.txt
+      - --keystore=/config/keystore
+      - --allow-insecure-unlock
+    volumes:
+      - ./config:/config:ro
+      - ./scripts:/scripts:ro
+      - signer-data:/data
+    networks:
+      honest_net: { ipv4_address: 172.28.0.10 }
+
+  # Nœud honnête qui donne la "vraie" hauteur de chaîne (pour le retard de sync)
+  reference:
+    <<: *geth
+    container_name: eva-reference
+    depends_on: [signer]
+    environment:
+      <<: *geth-env
+      NODE_NAME: reference
+      NODE_IP: 172.28.0.11
+    command: ["--bootnodes=${BOOTNODE_ENODE}"]
+    ports:
+      - "127.0.0.1:8546:8545"  # RPC
+      - "127.0.0.1:6061:6060"  # métriques
+    volumes:
+      - ./config:/config:ro
+      - ./scripts:/scripts:ro
+      - reference-data:/data
+    networks:
+      honest_net: { ipv4_address: 172.28.0.11 }
+
+  honest1:
+    <<: *geth
+    container_name: eva-honest1
+    depends_on: [signer]
+    environment:
+      <<: *geth-env
+      NODE_NAME: honest1
+      NODE_IP: 172.28.0.12
+    command: ["--bootnodes=${BOOTNODE_ENODE}"]
+    volumes:
+      - ./config:/config:ro
+      - ./scripts:/scripts:ro
+      - honest1-data:/data
+    networks:
+      honest_net: { ipv4_address: 172.28.0.12 }
+
+  honest2:
+    <<: *geth
+    container_name: eva-honest2
+    depends_on: [signer]
+    environment:
+      <<: *geth-env
+      NODE_NAME: honest2
+      NODE_IP: 172.28.0.13
+    command: ["--bootnodes=${BOOTNODE_ENODE}"]
+    volumes:
+      - ./config:/config:ro
+      - ./scripts:/scripts:ro
+      - honest2-data:/data
+    networks:
+      honest_net: { ipv4_address: 172.28.0.13 }
+
+  honest3:
+    <<: *geth
+    container_name: eva-honest3
+    depends_on: [signer]
+    environment:
+      <<: *geth-env
+      NODE_NAME: honest3
+      NODE_IP: 172.28.0.14
+    command: ["--bootnodes=${BOOTNODE_ENODE}"]
+    volumes:
+      - ./config:/config:ro
+      - ./scripts:/scripts:ro
+      - honest3-data:/data
+    networks:
+      honest_net: { ipv4_address: 172.28.0.14 }
+
+  # Le nœud surveillé par EVA-Guard. maxpeers petit pour rendre l'Eclipse faisable.
+  victim:
+    <<: *geth
+    container_name: eva-victim
+    depends_on: [signer]
+    environment:
+      <<: *geth-env
+      NODE_NAME: victim
+      NODE_IP: 172.28.0.100
+    command: ["--bootnodes=${BOOTNODE_ENODE}", "--maxpeers=10"]
+    ports:
+      - "127.0.0.1:8545:8545"  # RPC (semaine 4 : passera par le proxy RPC)
+      - "127.0.0.1:6060:6060"  # métriques Prometheus : /debug/metrics/prometheus
+    volumes:
+      - ./config:/config:ro
+      - ./scripts:/scripts:ro
+      - victim-data:/data
+    networks:
+      honest_net: { ipv4_address: 172.28.0.100 }
+
+networks:
+  honest_net:
+    name: eva_honest_net
+    ipam:
+      config:
+        - subnet: 172.28.0.0/24
+
+volumes:
+  signer-data:
+  reference-data:
+  honest1-data:
+  honest2-data:
+  honest3-data:
+  victim-data:

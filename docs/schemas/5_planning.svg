@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1000" height="380" fill="#ffffff"/>
+  <!-- grille : colonne label 20-270, semaines 280-984 (16 x 44) -->
+  <g font-size="11" font-weight="700" fill="#24427a" text-anchor="middle">
+    <text x="302" y="34">S1</text><text x="346" y="34">S2</text><text x="390" y="34">S3</text><text x="434" y="34">S4</text>
+    <text x="478" y="34">S5</text><text x="522" y="34">S6</text><text x="566" y="34">S7</text><text x="610" y="34">S8</text>
+    <text x="654" y="34">S9</text><text x="698" y="34">S10</text><text x="742" y="34">S11</text><text x="786" y="34">S12</text>
+    <text x="830" y="34">S13</text><text x="874" y="34">S14</text><text x="918" y="34">S15</text><text x="962" y="34">S16</text>
+  </g>
+  <g stroke="#e1e6ef" stroke-width="1">
+    <line x1="280" y1="44" x2="280" y2="330"/><line x1="324" y1="44" x2="324" y2="330"/><line x1="368" y1="44" x2="368" y2="330"/>
+    <line x1="412" y1="44" x2="412" y2="330"/><line x1="456" y1="44" x2="456" y2="330"/><line x1="500" y1="44" x2="500" y2="330"/>
+    <line x1="544" y1="44" x2="544" y2="330"/><line x1="588" y1="44" x2="588" y2="330"/><line x1="632" y1="44" x2="632" y2="330"/>
+    <line x1="676" y1="44" x2="676" y2="330"/><line x1="720" y1="44" x2="720" y2="330"/><line x1="764" y1="44" x2="764" y2="330"/>
+    <line x1="808" y1="44" x2="808" y2="330"/><line x1="852" y1="44" x2="852" y2="330"/><line x1="896" y1="44" x2="896" y2="330"/>
+    <line x1="940" y1="44" x2="940" y2="330"/><line x1="984" y1="44" x2="984" y2="330"/>
+  </g>
+  <g font-size="12.5" fill="#1d2433">
+    <text x="20" y="69">Biblio + prise en main</text>
+    <text x="20" y="104">Infra, monitoring, baseline</text>
+    <text x="20" y="139">Attaques + dataset</text>
+    <text x="20" y="174">Détection ML (Baseline 1)</text>
+    <text x="20" y="209">LLM + RAG (Baseline 2)</text>
+    <text x="20" y="244">Agents + confirmation</text>
+    <text x="20" y="279">Évaluation + ablation</text>
+    <text x="20" y="314">Rapport + soutenance</text>
+  </g>
+  <g rx="6">
+    <rect x="282" y="52" width="84" height="26" rx="6" fill="#6a4fb3"/>
+    <rect x="370" y="87" width="128" height="26" rx="6" fill="#2e8b57"/>
+    <rect x="502" y="122" width="128" height="26" rx="6" fill="#c0392b"/>
+    <rect x="634" y="157" width="84" height="26" rx="6" fill="#c58a00"/>
+    <rect x="722" y="192" width="40" height="26" rx="6" fill="#0b3d91"/>
+    <rect x="766" y="227" width="128" height="26" rx="6" fill="#0b3d91"/>
+    <rect x="898" y="262" width="40" height="26" rx="6" fill="#24427a"/>
+    <rect x="942" y="297" width="40" height="26" rx="6" fill="#1d2433"/>
+  </g>
+  <!-- livrables (losanges) -->
+  <g fill="#ffffff" stroke="#1d2433" stroke-width="1.5">
+    <polygon points="366,58 373,65 366,72 359,65"/>
+    <polygon points="498,93 505,100 498,107 491,100"/>
+    <polygon points="630,128 637,135 630,142 623,135"/>
+    <polygon points="718,163 725,170 718,177 711,170"/>
+    <polygon points="762,198 769,205 762,212 755,205"/>
+    <polygon points="894,233 901,240 894,247 887,240"/>
+    <polygon points="938,268 945,275 938,282 931,275"/>
+    <polygon points="982,303 989,310 982,317 975,310"/>
+  </g>
+  <g font-size="10.5" fill="#3b4a66">
+    <text x="380" y="69">étude biblio v1</text>
+    <text x="512" y="104">plateforme + baseline normale</text>
+    <text x="644" y="139">dataset v1 documenté</text>
+    <text x="732" y="174">résultats B1</text>
+    <text x="776" y="209">résultats B2</text>
+    <text x="604" y="244" text-anchor="start">prototype EVA-Guard</text>
+    <text x="890" y="279" text-anchor="end">résultats comparatifs</text>
+    <text x="934" y="314" text-anchor="end">rapport + démo</text>
+  </g>
+  <g font-size="11" fill="#3b4a66">
+    <polygon points="30,352 37,359 30,366 23,359" fill="#ffffff" stroke="#1d2433" stroke-width="1.5"/>
+    <text x="44" y="363">= livrable de fin d'étape</text>
+    <text x="230" y="363">★ Semaine 5 : squelette bout en bout (pipeline complet, même simple)</text>
+  </g>
+</svg>

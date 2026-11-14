@@ -1,0 +1,3 @@
+* text=auto
+# Les scripts shell tournent dans les conteneurs Linux : toujours des fins de ligne LF
+*.sh text eol=lf

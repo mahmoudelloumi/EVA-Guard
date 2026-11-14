@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#24427a"/></marker>
+  </defs>
+  <rect width="1000" height="400" fill="#ffffff"/>
+
+  <!-- tags baselines -->
+  <g font-size="11" font-weight="700" text-anchor="middle">
+    <rect x="215" y="14" width="110" height="22" rx="11" fill="#f1f2f4" stroke="#6b7280"/><text x="270" y="29" fill="#4b5563">B1 décide ici</text>
+    <rect x="385" y="14" width="110" height="22" rx="11" fill="#f1f2f4" stroke="#6b7280"/><text x="440" y="29" fill="#4b5563">B2 décide ici</text>
+    <rect x="800" y="14" width="150" height="22" rx="11" fill="#0b3d91"/><text x="875" y="29" fill="#ffffff">EVA-Guard décide ici</text>
+  </g>
+
+  <!-- ligne principale -->
+  <rect x="20" y="70" width="150" height="60" rx="8" fill="#f4f7fc" stroke="#24427a"/>
+  <text x="95" y="96" font-size="12.5" font-weight="700" fill="#24427a" text-anchor="middle">Fenêtre de 10 s</text>
+  <text x="95" y="114" font-size="11" fill="#3b4a66" text-anchor="middle">métriques collectées</text>
+
+  <polygon points="270,52 335,100 270,148 205,100" fill="#e8eefb" stroke="#0b3d91" stroke-width="1.5"/>
+  <text x="270" y="97" font-size="12" font-weight="700" fill="#0b3d91" text-anchor="middle">Anomalie</text>
+  <text x="270" y="113" font-size="12" font-weight="700" fill="#0b3d91" text-anchor="middle">ML ?</text>
+
+  <rect x="365" y="70" width="150" height="60" rx="8" fill="#e8eefb" stroke="#0b3d91"/>
+  <text x="440" y="96" font-size="12.5" font-weight="700" fill="#0b3d91" text-anchor="middle">Hypothèse</text>
+  <text x="440" y="114" font-size="11" fill="#3b4a66" text-anchor="middle">LLM + RAG (JSON)</text>
+
+  <rect x="555" y="70" width="170" height="60" rx="8" fill="#e8eefb" stroke="#0b3d91"/>
+  <text x="640" y="96" font-size="12.5" font-weight="700" fill="#0b3d91" text-anchor="middle">Collecte des preuves</text>
+  <text x="640" y="114" font-size="11" fill="#3b4a66" text-anchor="middle">agent Corrélation</text>
+  <g font-size="10" font-weight="700" text-anchor="middle" fill="#24427a">
+    <rect x="555" y="140" width="38" height="18" rx="9" fill="#fff" stroke="#24427a"/><text x="574" y="153">P2P</text>
+    <rect x="599" y="140" width="40" height="18" rx="9" fill="#fff" stroke="#24427a"/><text x="619" y="153">Chaîne</text>
+    <rect x="645" y="140" width="36" height="18" rx="9" fill="#fff" stroke="#24427a"/><text x="663" y="153">SYS</text>
+    <rect x="687" y="140" width="38" height="18" rx="9" fill="#fff" stroke="#24427a"/><text x="706" y="153">RPC</text>
+  </g>
+
+  <rect x="765" y="48" width="215" height="112" rx="8" fill="#ffffff" stroke="#0b3d91" stroke-width="2.5"/>
+  <text x="872" y="72" font-size="13" font-weight="700" fill="#0b3d91" text-anchor="middle">Agent Confirmation</text>
+  <g font-size="12" fill="#1d2433">
+    <text x="782" y="96">✔ ≥ 3 preuves vraies</text>
+    <text x="782" y="118">✔ ≥ 2 sources différentes</text>
+    <text x="782" y="140">✔ 2 fenêtres consécutives</text>
+  </g>
+
+  <g stroke="#24427a" stroke-width="1.8" marker-end="url(#a)">
+    <line x1="170" y1="100" x2="203" y2="100"/>
+    <line x1="335" y1="100" x2="363" y2="100"/>
+    <line x1="515" y1="100" x2="553" y2="100"/>
+    <line x1="725" y1="100" x2="763" y2="100"/>
+  </g>
+  <text x="349" y="92" font-size="10.5" fill="#1e6b41" text-anchor="middle" font-weight="700">oui</text>
+
+  <!-- non ML -->
+  <line x1="270" y1="148" x2="270" y2="188" stroke="#24427a" stroke-width="1.8" marker-end="url(#a)"/>
+  <text x="278" y="172" font-size="10.5" fill="#4b5563" font-weight="700">non</text>
+  <rect x="200" y="190" width="140" height="40" rx="8" fill="#f1f2f4" stroke="#6b7280"/>
+  <text x="270" y="215" font-size="12" fill="#4b5563" text-anchor="middle">Normal, on continue</text>
+
+  <!-- sorties -->
+  <line x1="830" y1="160" x2="735" y2="216" stroke="#24427a" stroke-width="1.8" marker-end="url(#a)"/>
+  <line x1="915" y1="160" x2="915" y2="216" stroke="#24427a" stroke-width="1.8" marker-end="url(#a)"/>
+  <text x="768" y="190" font-size="10.5" fill="#1e6b41" font-weight="700">oui</text>
+  <text x="923" y="192" font-size="10.5" fill="#4b5563" font-weight="700">non</text>
+  <rect x="640" y="218" width="160" height="56" rx="8" fill="#e3f4e8" stroke="#2e8b57" stroke-width="2"/>
+  <text x="720" y="242" font-size="13" font-weight="700" fill="#1e6b41" text-anchor="middle">CONFIRMÉE</text>
+  <text x="720" y="261" font-size="11" fill="#1e6b41" text-anchor="middle">attaque prouvée</text>
+  <rect x="820" y="218" width="160" height="56" rx="8" fill="#f1f2f4" stroke="#6b7280" stroke-width="2"/>
+  <text x="900" y="242" font-size="13" font-weight="700" fill="#4b5563" text-anchor="middle">NON CONFIRMÉE</text>
+  <text x="900" y="261" font-size="11" fill="#4b5563" text-anchor="middle">anomalie à surveiller</text>
+
+  <line x1="720" y1="274" x2="760" y2="318" stroke="#24427a" stroke-width="1.8" marker-end="url(#a)"/>
+  <line x1="900" y1="274" x2="860" y2="318" stroke="#24427a" stroke-width="1.8" marker-end="url(#a)"/>
+  <rect x="640" y="320" width="340" height="60" rx="8" fill="#0b3d91"/>
+  <text x="810" y="345" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">Agent Restitution → Dashboard</text>
+  <text x="810" y="364" font-size="11" fill="#dbe4f5" text-anchor="middle">rapport · preuves ✔/✘ · explication · recommandation</text>
+
+  <!-- légende -->
+  <rect x="20" y="255" width="580" height="125" rx="8" fill="#f8fafd" stroke="#c9d3e6"/>
+  <text x="38" y="279" font-size="13" font-weight="700" fill="#0b3d91">Les 3 configurations comparées</text>
+  <g font-size="12" fill="#1d2433">
+    <text x="38" y="304"><tspan font-weight="700">Baseline 1 :</tspan> alerte ML = attaque (aucune vérification).</text>
+    <text x="38" y="327"><tspan font-weight="700">Baseline 2 :</tspan> l'hypothèse du LLM = attaque (pas de preuves).</text>
+    <text x="38" y="350"><tspan font-weight="700">EVA-Guard :</tspan> attaque seulement si la règle de preuves est respectée.</text>
+    <text x="38" y="370" font-size="11" fill="#3b4a66" font-style="italic">Le LLM propose et explique · les outils mesurent · la règle décide.</text>
+  </g>
+</svg>

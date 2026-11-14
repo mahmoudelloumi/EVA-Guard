@@ -1,0 +1,23 @@
+# Clés et config générées par infra/setup.py (ne jamais publier)
+infra/config/
+infra/.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Données brutes (gros fichiers) : on garde seulement la structure
+data/raw/*
+!data/raw/.gitkeep
+
+# Modèles entraînés et index RAG (on peut les régénérer)
+detection/models/
+rag/index/
+
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
